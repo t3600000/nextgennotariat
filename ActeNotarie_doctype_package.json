@@ -1,0 +1,78 @@
+{
+  "doctype": "DocType",
+  "name": "ActeNotarie",
+  "module": "Notariat",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "autoname": "field:nom_acte",
+  "fields": [
+    {
+      "fieldname": "nom_acte",
+      "label": "Nom de l'acte",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "type_acte",
+      "label": "Type d'acte",
+      "fieldtype": "Select",
+      "options": "Vente\nDonation\nTestament\nMariage\nDivorce\nCréation de société\nCession de parts\nBail\nHypothèque\nContrat de prêt\nSuccession\nAutre",
+      "reqd": 1
+    },
+    {
+      "fieldname": "client_principal",
+      "label": "Client principal",
+      "fieldtype": "Link",
+      "options": "Customer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "autres_parties",
+      "label": "Autres Parties",
+      "fieldtype": "Table",
+      "options": "PartieConcernee"
+    },
+    {
+      "fieldname": "date_signature",
+      "label": "Date de signature",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "date_enregistrement",
+      "label": "Date d'enregistrement",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "etat_traitement",
+      "label": "État de traitement",
+      "fieldtype": "Select",
+      "options": "Brouillon\nEn attente de signature\nSigné par le client\nSigné par le notaire\nEn cours de légalisation\nLégalisé\nEn cours d’enregistrement\nEnregistré (DGID)\nEn cours de timbrage\nTimbré\nDépôt au greffe\nValidé par le greffe\nActe finalisé\nArchivé\nAnnulé"
+    },
+    {
+      "fieldname": "documents_associes",
+      "label": "Documents associés",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "facture_associee",
+      "label": "Facture liée",
+      "fieldtype": "Link",
+      "options": "Sales Invoice"
+    },
+    {
+      "fieldname": "remarques",
+      "label": "Remarques",
+      "fieldtype": "Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}
