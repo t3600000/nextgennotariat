@@ -1,0 +1,54 @@
+{
+  "doctype": "DocType",
+  "name": "PartieConcernee",
+  "module": "Custom",
+  "custom": 1,
+  "istable": 1,
+  "editable_grid": 1,
+  "autoname": "field:nom_partie",
+  "fields": [
+    {
+      "fieldname": "reference_client",
+      "label": "Référence Client",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "nom_partie",
+      "label": "Nom de la Partie",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "role_partie",
+      "label": "Rôle de la Partie",
+      "fieldtype": "Select",
+      "options": "Acheteur\nVendeur\nDonateur\nDonataire\nTestateur\nHéritier\nReprésentant légal\nTuteur\nMandataire\nMandant\nAssocié fondateur\nAssocié\nGérant\nCédant de parts\nCessionnaire de parts\nÉpoux\nÉpouse\nTémoins\nBénéficiaire\nTiers de confiance\nNotaire assistant\nReprésentant d’entité morale",
+      "reqd": 1
+    },
+    {
+      "fieldname": "cni_partie",
+      "label": "Numéro CNI / Passeport",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "adresse_partie",
+      "label": "Adresse",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "contact_partie",
+      "label": "Contact",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}
